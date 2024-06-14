@@ -1,17 +1,20 @@
 import React from 'react';
+import { toggleEditing } from '../actions/dragonListActions';
 
 const TitleDisplay = (props)=> {
-  const handleClick = () => {
-    props.handleToggleEditing();
-  }
 
   return(<h2>
       {props.title}{' '}
       <i
         className="far fa-edit"
-        onClick={handleClick}
+        onClick={() => toggleEditing()}
       />
   </h2>);
 }
 
-export default TitleDisplay;
+const mapStateToProps = state => {
+  return {
+    title: state.title.title
+  }
+}
+export default connect(mapStateToProps, {toggleEditing})(TitleDisplay);
