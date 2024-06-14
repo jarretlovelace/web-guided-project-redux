@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import TitleDisplay from './TitleDisplay';
 import TitleForm from './TitleForm';
 
-const Title = () => {
+const Title = (props) => {
  return (
     <div>
       {

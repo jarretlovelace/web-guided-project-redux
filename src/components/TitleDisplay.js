@@ -7,7 +7,7 @@ const TitleDisplay = (props)=> {
       {props.title}{' '}
       <i
         className="far fa-edit"
-        onClick={() => toggleEditing()}
+        onClick={() => props.toggleEditing()}
       />
   </h2>);
 }
